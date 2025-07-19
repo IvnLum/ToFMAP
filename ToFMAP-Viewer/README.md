@@ -1,6 +1,10 @@
 # ToFMAP Viewer
 Custom "from-scratch" computer vision software to be used as part of ToFMAP project
 
+<p align="center">
+    <img height=500 src="https://raw.githubusercontent.com/IvnLum/ToFMAP/main/img/vision.gif" />
+</p>
+
 Tested under Linux environment, you can compile and test it under windows using MinGW or similar since it uses UNIX sockets
 
 Dependencies
