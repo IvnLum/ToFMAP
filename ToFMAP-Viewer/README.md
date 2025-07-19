@@ -1,20 +1,21 @@
 # ToFMAP Viewer
-Software de visionado de superficies con vehiculo y ToF
+Custom "from-scratch" computer vision software to be used as part of ToFMAP project
 
-Restricciones
-- Probado sobre Linux, se necesita: ultimas versiones de Windows / MinGW o similares para hacer uso de este software (UNIX sockets)
+Tested under Linux environment, you can compile and test it under windows using MinGW or similar since it uses UNIX sockets
 
-Dependencias
-- OpenGL freeglut
+Dependencies
+- Free OpenGL Utility Toolkit (freeglut)
 
-Compilación
+
+Compilation
 
 ```sh
 make .
 ```
 
-Ejecución
-./binario [Dimensión tablero cuadrado] [N bloques (ignorado por ahora)] [Altura máxima (ignorado por ahora)]
+Testing (using "run" as name for the compiled & linked object(s))
+
+./run [Board Dimension (in blocks)] [Block N (unused feature)] [Max Height (unused feature)]
 ```sh
-./binario 150 5 4
+./run 150 5 4
 ```
