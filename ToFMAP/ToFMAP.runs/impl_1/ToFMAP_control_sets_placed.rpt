@@ -1,0 +1,128 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
+| Date         : Tue Jun 11 19:39:46 2024
+| Host         : in running 64-bit Void Linux
+| Command      : report_control_sets -verbose -file ToFMAP_control_sets_placed.rpt
+| Design       : ToFMAP
+| Device       : xc7a35t
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    50 |
+|    Minimum number of control sets                        |    50 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |   173 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    50 |
+| >= 0 to < 4        |     9 |
+| >= 4 to < 6        |     6 |
+| >= 6 to < 8        |     2 |
+| >= 8 to < 10       |     6 |
+| >= 10 to < 12      |     1 |
+| >= 12 to < 14      |     1 |
+| >= 14 to < 16      |     0 |
+| >= 16              |    25 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             181 |           64 |
+| No           | No                    | Yes                    |             131 |           38 |
+| No           | Yes                   | No                     |             299 |           76 |
+| Yes          | No                    | No                     |             362 |          154 |
+| Yes          | No                    | Yes                    |               2 |            2 |
+| Yes          | Yes                   | No                     |             108 |           35 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------------------------+------------------------------------------------------+------------------------------------------------------+------------------+----------------+--------------+
+|           Clock Signal           |                     Enable Signal                    |                   Set/Reset Signal                   | Slice Load Count | Bel Load Count | Bels / Slice |
++----------------------------------+------------------------------------------------------+------------------------------------------------------+------------------+----------------+--------------+
+|  UART_conn/div_clk_reg_n_0       | UART_conn/rx_buffer_data[0]_i_1_n_0                  |                                                      |                1 |              1 |         1.00 |
+|  CLK_IBUF_BUFG                   | pmodToF_i2c_conn/SS_i_1_n_0                          |                                                      |                1 |              1 |         1.00 |
+|  CLK_IBUF_BUFG                   |                                                      | UART_conn/rx_out_data_reg[1]_0                       |                1 |              1 |         1.00 |
+|  UART_conn/div_clk_reg_n_0       | UART_conn/rx_buffer_data[5]_i_1_n_0                  |                                                      |                1 |              1 |         1.00 |
+|  UART_conn/div_clk_reg_n_0       | UART_conn/rx_buffer_data[4]_i_1_n_0                  |                                                      |                1 |              1 |         1.00 |
+|  UART_conn/div_clk_reg_n_0       | UART_conn/rx_buffer_data[3]_i_1_n_0                  |                                                      |                1 |              1 |         1.00 |
+|  UART_conn/div_clk_reg_n_0       | UART_conn/rx_buffer_data[2]_i_1_n_0                  |                                                      |                1 |              1 |         1.00 |
+|  UART_conn/div_clk_reg_n_0       | UART_conn/rx_buffer_data[1]_i_1_n_0                  |                                                      |                1 |              1 |         1.00 |
+|  pwm_out_reg_i_3_n_0             | PWM_conn/pwm_out0                                    | PWM_conn/pwm_out_i_4_n_0                             |                2 |              2 |         1.00 |
+|  clk_div_stepper_reg_n_0_BUFG    |                                                      |                                                      |                2 |              4 |         2.00 |
+|  UART_conn/div_clk_reg_n_0       | UART_conn/rx_process.rx_current_bit[3]_i_2_n_0       | UART_conn/rx_process.rx_current_bit[3]_i_1_n_0       |                1 |              4 |         4.00 |
+|  CLK_IBUF_BUFG                   | pmodToF_i2c_conn/a/fsm_state_reg[0]_0[0]             |                                                      |                3 |              4 |         1.33 |
+|  CLK_IBUF_BUFG                   | pmodToF_i2c_conn/g0_b0_n_0                           |                                                      |                3 |              4 |         1.33 |
+|  servo_clk_BUFG                  |                                                      |                                                      |                3 |              4 |         1.33 |
+|  CLK_IBUF_BUFG                   | pmodToF_i2c_conn/a/fsm_state_reg[0][0]               |                                                      |                2 |              5 |         2.50 |
+|  UART_conn/div_clk_reg_n_0       |                                                      | LED_OBUF[15]                                         |                1 |              6 |         6.00 |
+|  CLK_IBUF_BUFG                   | UART_conn/E[0]                                       | PWM_conn_motor_i/SR[0]                               |                4 |              7 |         1.75 |
+|  CLK_IBUF_BUFG                   | pmodToF_i2c_conn/a/fsm_state_reg[1][0]               |                                                      |                2 |              8 |         4.00 |
+|  CLK_IBUF_BUFG                   | pmodToF_i2c_conn/a/fsm_state_reg[1]_0[0]             |                                                      |                3 |              8 |         2.67 |
+|  CLK_IBUF_BUFG                   | pmodToF_i2c_conn/a/fsm_state_reg[3][0]               |                                                      |                7 |              8 |         1.14 |
+|  CLK_IBUF_BUFG                   | pmodToF_i2c_conn/a/data_rd[7]_i_1_n_0                |                                                      |                3 |              8 |         2.67 |
+|  CLK_IBUF_BUFG                   | pmodToF_i2c_conn/a/addr_rw0                          |                                                      |                4 |              9 |         2.25 |
+|  CLK_IBUF_BUFG                   | pmodToF_i2c_conn/a/busy1                             |                                                      |                4 |              9 |         2.25 |
+|  CLK_IBUF_BUFG                   |                                                      | UART_conn/baud_clk_divider.baud_current[9]_i_1_n_0   |                3 |             10 |         3.33 |
+|  UART_conn/div_clk_reg_n_0       | UART_conn/rx_out_data[5]_i_1_n_0                     |                                                      |                4 |             12 |         3.00 |
+|  CLK_IBUF_BUFG                   | pmodToF_i2c_conn/MSB_merge_LSB                       | pmodToF_i2c_conn/fsm_state_reg[4]_0                  |                8 |             16 |         2.00 |
+|  CLK_IBUF_BUFG                   |                                                      | LED_OBUF[15]                                         |                5 |             20 |         4.00 |
+|  CLK_IBUF_BUFG                   | pmodToF_i2c_conn/a/fsm_state_reg[0]_1                |                                                      |               11 |             29 |         2.64 |
+|  CLK_IBUF_BUFG                   | stepper_update_azimuth_process.clk_d_reg[0]_i_1_n_7  |                                                      |                8 |             29 |         3.62 |
+|  CLK_IBUF_BUFG                   |                                                      | Servo_clk_div.servo_current_clk_reg[0]_i_1_n_5       |                8 |             32 |         4.00 |
+|  pwm_out_reg_i_3_n_0             |                                                      | PWM_conn/pwm_out_i_4_n_0                             |                8 |             32 |         4.00 |
+|  clk_div_stepper_reg_n_0_BUFG    |                                                      | stepper_upd_process.cont_reg[0]_i_1_n_7              |                8 |             32 |         4.00 |
+|  servo_clk_BUFG                  |                                                      | Servo_control.current_duty_reg[0]_i_1_n_7            |                8 |             32 |         4.00 |
+|  CLK_IBUF_BUFG                   |                                                      | Servo_clk_div.current_upd_await_cycles[0]_i_1_n_0    |                8 |             32 |         4.00 |
+|  CLK_IBUF_BUFG                   |                                                      | Servo_clk_div.enable_sweep_current_period[0]_i_1_n_0 |                8 |             32 |         4.00 |
+|  CLK_IBUF_BUFG                   |                                                      | buzzer_process.clk_d_reg[0]_i_1_n_5                  |                8 |             32 |         4.00 |
+|  CLK_IBUF_BUFG                   |                                                      | stepper_pulse_clk_process.clk_d_reg[0]_i_1_n_7       |                8 |             32 |         4.00 |
+|  CLK_IBUF_BUFG                   |                                                      | vehicle_location_process.loc_x_signed[28]_i_1_n_0    |                8 |             32 |         4.00 |
+|  CLK_IBUF_BUFG                   | sel                                                  |                                                      |                9 |             32 |         3.56 |
+|  CLK_IBUF_BUFG                   | Servo_clk_div.enable_sweep_current_period[0]_i_1_n_0 | Servo_clk_div.target_sweep_current_sleep[0]_i_1_n_0  |                8 |             32 |         4.00 |
+|  CLK_IBUF_BUFG                   |                                                      | stepper_update_azimuth_process.clk_d_reg[0]_i_1_n_7  |                8 |             32 |         4.00 |
+|  CLK_IBUF_BUFG                   |                                                      | servo_clk_BUFG                                       |                9 |             33 |         3.67 |
+|  CLK_IBUF_BUFG                   | UART_conn/rx_out_data_reg[0]_0[0]                    |                                                      |               27 |             33 |         1.22 |
+|  PWM_process.iter_reg[0]_i_2_n_0 |                                                      |                                                      |                9 |             33 |         3.67 |
+|  clk_BUFG                        |                                                      |                                                      |                9 |             33 |         3.67 |
+|  tx_event_BUFG                   |                                                      | LED_OBUF[15]                                         |               15 |             40 |         2.67 |
+|  CLK_IBUF_BUFG                   | pmodToF_i2c_conn/samples                             | pmodToF_i2c_conn/pmodToF_process.samples[31]_i_1_n_0 |               14 |             49 |         3.50 |
+|  CLK_IBUF_BUFG                   | UART_conn/loc_y_v                                    |                                                      |               21 |             68 |         3.24 |
+|  CLK_IBUF_BUFG                   | vehicle_location_process.loc_x_signed[28]_i_1_n_0    |                                                      |               36 |             89 |         2.47 |
+|  CLK_IBUF_BUFG                   |                                                      |                                                      |               41 |            107 |         2.61 |
++----------------------------------+------------------------------------------------------+------------------------------------------------------+------------------+----------------+--------------+
+
+

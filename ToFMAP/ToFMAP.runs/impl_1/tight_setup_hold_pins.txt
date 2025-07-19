@@ -1,0 +1,7 @@
++====================+===================+=====================================+
+| Launch Setup Clock | Launch Hold Clock | Pin                                 |
++====================+===================+=====================================+
+| sys_clk_pin        | sys_clk_pin       | pmodToF_i2c_conn/fsm_state_reg[2]/D |
+| sys_clk_pin        | sys_clk_pin       | pmodToF_i2c_conn/fsm_state_reg[1]/D |
+| sys_clk_pin        | sys_clk_pin       | pmodToF_i2c_conn/fsm_state_reg[0]/D |
++--------------------+-------------------+-------------------------------------+
