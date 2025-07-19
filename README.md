@@ -1,6 +1,13 @@
 # ToFMAP
 Complete FPGA-Based area mapping  UGV (Unmanned Ground Vehicle) using a single ToF Module & stepper motor
 
+
+<p align="center">
+    <img height=500 src="https://raw.githubusercontent.com/IvnLum/ToFMAP/main/img/ToFMAP.png" />
+</p>
+
+> Basic usage of the ToFMAP system
+
 <p align="center">
     <img height=330 src="https://raw.githubusercontent.com/IvnLum/ToFMAP/main/img/vehicle.jpg" />
     <img height=300 src="https://raw.githubusercontent.com/IvnLum/ToFMAP/main/img/vision.png" />
