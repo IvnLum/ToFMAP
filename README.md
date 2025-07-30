@@ -6,7 +6,7 @@ Complete FPGA-Based area mapping  UGV (Unmanned Ground Vehicle) using a single T
     <img height=500 src="https://raw.githubusercontent.com/IvnLum/ToFMAP/main/img/ToFMAP.png" />
 </p>
 
-> University's lab mapping as main scenario of the ToFMAP system testing
+> Uni lab mapping as main scenario of the ToFMAP system testing
 
 <p align="center">
     <img height=330 src="https://raw.githubusercontent.com/IvnLum/ToFMAP/main/img/vehicle.jpg" />
